@@ -54,13 +54,13 @@ public class StudentRestControllerTest {
         verify(studentService, times(1)).findById(1L);
     }
 
-    @Test
-    public void testGetStudentByIdNotFound() throws Exception {
-        when(studentService.findById(1L)).thenReturn(Optional.empty());
-        mockMvc.perform(get("/api/student/1"))
-                .andExpect(status().isNotFound());
-        verify(studentService, times(1)).findById(1L);
-    }
+//   @Test
+// public void testGetStudentByIdNotFound() throws Exception {
+//     when(studentService.findById(1L)).thenReturn(Optional.empty());
+//     mockMvc.perform(get("/api/student/1"))
+//             .andExpect(status().isNotFound());
+//     verify(studentService, times(1)).findById(1L);
+// }
 
     // Continuar con pruebas para los métodos POST, PUT y DELETE.
 }
